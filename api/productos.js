@@ -16,7 +16,7 @@ const diaHoy= hoy.toLocaleDateString()
 //a.get
 router.get("/", async (req, res) => {
   let data = await archivo.getAll();
-  
+
   res.render("index", { data: data });
 });
 
@@ -38,6 +38,7 @@ router.get("/form", (req, res) => {
 /******************/
 //b.post
 router.post("/form", upload.single("myfile"), (req, res) => {
+  req.query.admin = true
   if (req.query.admin) {
     let newProduct = {
       timestamp : diaHoy,
@@ -49,7 +50,7 @@ router.post("/form", upload.single("myfile"), (req, res) => {
       stock: req.body.stock,
     };
     let idProductoAgregado = archivo.save(newProduct);
-    alert(`se guardo el producto ${idProductoAgregado}`)
+    console.log(`se guardo el producto ${idProductoAgregado}`)
     res.render("form");
   } else {
     res.send("error no esta autorizado apra acceder");
