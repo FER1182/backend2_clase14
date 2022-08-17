@@ -31,6 +31,11 @@ router.delete("/:id", async (req, res) => {
   //res.send(productos);
 });
 
+router.get("/", async (req, res) => {
+  let data = await carrito.getAll();
+  res.render("cart", { data: data });
+});
+
 router.get("/:id/productos", async (req, res) => {
   let data = await carrito.getAll();
   res.render("cart", { data: data });

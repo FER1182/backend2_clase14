@@ -3,6 +3,7 @@ const { Router } = express;
 const Contenedor = require("./contenedor");
 const multer = require("multer");
 
+
 let router = new Router();
 let archivo = new Contenedor("text.json");
 
@@ -50,6 +51,7 @@ router.post("/form", upload.single("myfile"), (req, res) => {
       stock: req.body.stock,
     };
     let idProductoAgregado = archivo.save(newProduct);
+ 
     console.log(`se guardo el producto ${idProductoAgregado}`)
     res.render("form");
   } else {

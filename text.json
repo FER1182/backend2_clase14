@@ -52,4 +52,22 @@
     "price": "5300",
     "stock": "4",
     "id": 6
+}, {
+    "timestamp": "8/14/2022",
+    "name": "vaso",
+    "description": "vaso amarillo",
+    "codigo": "115sss11",
+    "urlFoto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-128.png",
+    "price": "1200",
+    "stock": "15",
+    "id": 7
+}, {
+    "timestamp": "8/15/2022",
+    "name": "tv",
+    "description": "wfefw",
+    "codigo": "asdfasdf",
+    "urlFoto": "https://cdn3.iconfinder.com/data/icons/education-209/64/clock-stopwatch-timer-time-128.png",
+    "price": "3000",
+    "stock": "15",
+    "id": 8
 }]
